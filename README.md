@@ -8,12 +8,13 @@ Here is mysql environment needed to do exercises and the solutions of [SQL Train
 ## Steps
 
 ### Run mysql container
+* Change `platform` in `docker-compose.yaml` to your platform if needed.
 ```
 docker-compose up -d
 ```
 
 ### Connect to the container
-* Or, actually you can use mysql CLI on local machine to connect with mysql inside the container.
+* Or, use CLI or application for MySQL on your local machine to connect with mysql inside the container.
 ```
 docker container exec -it mysql-container /bin/sh
 ```
