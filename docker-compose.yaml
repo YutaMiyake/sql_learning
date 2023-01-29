@@ -1,11 +1,15 @@
 version: "3.8"
 services:
   mysql:
+    platform: linux/x86_64
+    #platform: windows/amd64
+    #platform: linux/arm64/v8
     image: mysql:5.7.32
     container_name: mysql-container
-    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    command: mysqld
     volumes:
       - ./docker/schemas:/docker-entrypoint-initdb.d
+      - ./docker/my.cnf:/etc/mysql/my.cnf
       - .:/app
     ports:
       - 3306:3306

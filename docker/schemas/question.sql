@@ -1,6 +1,4 @@
 USE testdb;
-SET CHARACTER_SET_CLIENT = utf8mb4;
-SET CHARACTER_SET_CONNECTION = utf8mb4;
 
 -- create tables
 CREATE TABLE ice_cream_flavor
